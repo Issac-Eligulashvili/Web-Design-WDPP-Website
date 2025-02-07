@@ -150,6 +150,11 @@ ul.text-center  {
   border-radius: 10px;
 }
 
+.small-logo {
+  width: 20px;
+  filter: grayscale(100);
+}
+
 /* FONTS */
 .kanit-thin {
      font-family: "Kanit", serif;
