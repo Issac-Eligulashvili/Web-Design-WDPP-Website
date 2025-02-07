@@ -25,6 +25,11 @@
       href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lalezar&family=Raleway:ital,wght@0,653;1,653&display=swap"
       rel="stylesheet"
     />
+    <!-- CSS Animation Library https://animate.style/ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -70,55 +75,106 @@
             </li>
           </ul>
           <!-- Tech learned hover and cards and changing info -->
-          <h3 class="text-center kanit-regular">Technologies Learned</h3>
+          <h3 class="text-center kanit-semibold">Technologies Learned</h3>
           <div class="row mt-3">
-            <div
-              class="col-md-2 col-6 d-flex justify-content-center align-items-center"
+            <a
+              class="col-md-2 col-6 d-flex justify-content-center align-items-center logo-container flex-column"
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+              target="_blank"
             >
               <img src="img/svg/html-1.svg" class="logo-svg" />
-            </div>
-            <div
-              class="col-md-2 col-6 d-flex justify-content-center align-items-center"
+              <p class="smallText">Click to learn more</p>
+            </a>
+            <a
+              class="col-md-2 col-6 d-flex justify-content-center align-items-center logo-container flex-column"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+              target="_blank"
             >
               <img src="img/svg/css-3.svg" class="logo-svg" />
-            </div>
-            <div
-              class="col-md-2 col-6 d-flex justify-content-center align-items-center"
+              <p class="smallText">Click to learn more</p>
+            </a>
+            <a
+              class="col-md-2 col-6 d-flex justify-content-center align-items-center logo-container flex-column"
+              href="https://getbootstrap.com/"
+              target="_blank"
             >
-              <img
-                src="img/svg/bootstrap-5-1.svg"
-                class="logo-svg"
-                class="logo-svg"
-              />
-            </div>
-            <div
-              class="col-md-2 col-6 d-flex justify-content-center align-items-center"
+              <img src="img/svg/bootstrap-5-1.svg" class="logo-svg" />
+              <p class="smallText">Click to learn more</p>
+            </a>
+            <a
+              class="col-md-2 col-6 d-flex justify-content-center align-items-center logo-container flex-column"
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+              target="_blank"
             >
               <img src="img/svg/logo-javascript.svg" class="logo-svg" />
-            </div>
-            <div
-              class="col-md-2 col-6 d-flex justify-content-center align-items-center"
+              <p class="smallText">Click to learn more</p>
+            </a>
+            <a
+              class="col-md-2 col-6 d-flex justify-content-center align-items-center logo-container flex-column"
+              href="https://jquery.com/"
+              target="_blank"
             >
               <img src="img/svg/jquery-4.svg" class="logo-svg" />
-            </div>
-            <div
-              class="col-md-2 col-6 d-flex justify-content-center align-items-center"
+              <p class="smallText">Click to learn more</p>
+            </a>
+            <a
+              class="col-md-2 col-6 d-flex justify-content-center align-items-center logo-container flex-column"
+              href="https://vuejs.org/"
+              target="_blank"
             >
               <img src="img/svg/vue-9.svg" class="logo-svg" />
-            </div>
+              <p class="smallText">Click to learn more</p>
+            </a>
           </div>
+          <h3 class="text-center kanit-semibold">Course Progression</h3>
           <div class="row mt-3">
             <div class="progressBar">
               <div class="inner"></div>
-              <div class="overlay"></div>
+              <div class="overlay web"></div>
             </div>
             <div class="col-1">
-              <div class="logo"></div>
-              <div class="logo my-2"></div>
-              <div class="logo my-2"></div>
-              <div class="logo my-2"></div>
-              <div class="logo my-2"></div>
-              <div class="logo"></div>
+              <div class="logo active" data-num-items="3" data-year="1">
+                <div class="logo-cont d-flex align-items-center">
+                  <img src="img/svg/html-1.svg" class="small-logo-svg" />
+                </div>
+                <div class="logo-cont my-2 d-flex align-items-center">
+                  <img src="img/svg/css-3.svg" class="small-logo-svg" />
+                </div>
+                <div class="logo-cont my-2 d-flex align-items-center">
+                  <img src="img/svg/bootstrap-5-1.svg" class="small-logo-svg" />
+                </div>
+              </div>
+              <div class="logo my-2" data-num-items="4" data-year="2">
+                <img src="img/svg/logo-javascript.svg" class="small-logo-svg" />
+              </div>
+              <div class="logo" data-num-items="6" data-year="3">
+                <div class="logo-cont my-2">
+                  <img src="img/svg/jquery-4.svg" class="small-logo-svg" />
+                </div>
+                <div class="logo-cont">
+                  <img src="img/svg/vue-9.svg" class="small-logo-svg" />
+                </div>
+              </div>
+            </div>
+            <div class="col-10 ms-5 carousel-container position-relative">
+              <div
+                class="webCarouselContent animate__animated carouselActive position-absolute p-3"
+                data-index="0"
+              >
+                <h3 class="kanit-semibold m-0">Year 1</h3>
+              </div>
+              <div
+                class="webCarouselContent animate__animated position-absolute p-3"
+                data-index="1"
+              >
+                <h3 class="kanit-semibold m-0">Year 2</h3>
+              </div>
+              <div
+                class="webCarouselContent animate__animated position-absolute p-3"
+                data-index="2"
+              >
+                <h3 class="kanit-semibold m-0">Year 3</h3>
+              </div>
             </div>
           </div>
         </div>

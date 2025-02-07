@@ -13,9 +13,28 @@ ul.text-center  {
      transition: all .3s;
 }
 
-.logo-svg:hover{
+.logo-container:hover {
+  cursor: pointer;
+}
+
+.logo-container:hover > .logo-svg{
      filter: grayscale(0);
      opacity: 1;
+}
+
+.logo-container:hover > .smallText {
+  opacity: 0.8;
+}
+
+.smallText {
+  color: black;
+  opacity: 0;
+  font-size: 10px;
+  margin-top: .2rem;
+  transition: all 0.2s;
+  font-family: "Kanit", serif;
+     font-weight: 600;
+     font-style: normal;
 }
 
 .title {
@@ -28,7 +47,7 @@ ul.text-center  {
 }
 
 .subtitle{
-     color: rgb(73, 73, 73);
+     color: black;
 }
 
 .progressBar {
@@ -40,15 +59,14 @@ ul.text-center  {
 
 .inner {
   background-color: black;
-  opacity: 0.3;
+  opacity: 0.1;
   height: 100%;
   border-radius: inherit;
 }
 
 .overlay {
   background-image: -webkit-linear-gradient(90deg, #fc5279, #55ccff);;
-  opacity: 0.3;
-  height: calc(100% / 6);
+  opacity: 1;
   border-radius: inherit;
   position: absolute;
   z-index: 2;
@@ -56,10 +74,44 @@ ul.text-center  {
   top: 0;
 }
 
+.overlay.web {
+  height: calc(100% / 2);
+}
+
 .logo {
-  height: 100px;
-  width: 100px;
-  background: red;
+  height: fit-content;
+  width: 50px;
+  padding: 10px;
+  border: #f1f1f1 2px solid;
+  border-radius: 4px;
+}
+
+.webCarouselContent{
+  opacity: 0;
+  border: #f1f1f1 2px solid;
+  border-radius: inherit;
+  width: 100%;
+}
+
+.webCarouselContent.carouselActive {
+  opacity: 1;
+}
+
+.logo-cont {
+  height: 50px;
+}
+
+.logo.active{
+  box-shadow:  0 0 10px 5px #f1f1f1;
+}
+
+.small-logo-svg {
+  width: 100%;
+}
+
+.carousel-container {
+  height: 50%;
+  border-radius: 10px;
 }
 
 /* FONTS */
