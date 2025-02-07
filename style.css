@@ -57,6 +57,13 @@ ul.text-center  {
   position: relative;
 }
 
+.progressBarMobile {
+  height: 5px;
+  border-radius: 5px;
+  padding: 0;
+  position: relative;
+}
+
 .inner {
   background-color: black;
   opacity: 0.1;
@@ -65,17 +72,23 @@ ul.text-center  {
 }
 
 .overlay {
-  background-image: -webkit-linear-gradient(90deg, #fc5279, #55ccff);;
   opacity: 1;
   border-radius: inherit;
   position: absolute;
   z-index: 2;
-  width: 5px;
   top: 0;
 }
 
 .overlay.web {
   height: calc(100% / 2);
+  width: 5px;
+  background-image: -webkit-linear-gradient(90deg, #fc5279, #55ccff);
+}
+
+.overlay.mobile {
+  background-image: -webkit-linear-gradient(0deg, #fc5279, #55ccff);
+  height: 5px;
+  width: calc(100% / 2);
 }
 
 .logo {
@@ -86,11 +99,30 @@ ul.text-center  {
   border-radius: 4px;
 }
 
+.logoMobile {
+  height: 50px;
+  padding: 10px;
+  border: #f1f1f1 2px solid;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logoMobile.active {
+  box-shadow:  0 0 10px 5px #f1f1f1;
+}
+
+.logo-cont-mobile {
+  height: 100%;
+}
+
 .webCarouselContent{
   opacity: 0;
   border: #f1f1f1 2px solid;
   border-radius: inherit;
   width: 100%;
+  left: 0;
 }
 
 .webCarouselContent.carouselActive {
@@ -107,6 +139,10 @@ ul.text-center  {
 
 .small-logo-svg {
   width: 100%;
+}
+
+.small-logo-svg-mobile {
+  height: 100%;
 }
 
 .carousel-container {
