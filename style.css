@@ -151,8 +151,7 @@ ul.text-center  {
 }
 
 .small-logo {
-  width: 20px;
-  filter: grayscale(100);
+  height: 20px;
 }
 
 /* FONTS */

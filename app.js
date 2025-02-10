@@ -1,7 +1,80 @@
 const app = Vue.createApp({
      data() {
           return {
-               message: "Hello World",
+               carousel: [
+                    {
+                         header: "Year 1", 
+                         description: "This is the year 1 description of what is learned",
+                         // projects per year to change please follow the following directions: 
+
+                         /* 
+                              1. Replace the image link with the link to the preferred screenshot of the project you would like to showcase. 
+                              2. Provide the name of the project that you are showcasing preferrably from classroom. 
+                              3. Use ONLY the abbriviation for the languages you used i.e HTML, CSS, JS, BS, jQ, & Vue. 
+                              
+                              see the first project slide for the example of where to change items. 
+                         */
+                         projects: [ 
+                              {
+                                   image: 'https://picsum.photos/600/300', //Here is the link for the image please be organized and put the image into the project photos folder
+                                   name: 'Project Name', //Here is the name of the project. Use the classroom name to maintain unity across all sites incase project is used elsewhere 
+                                   languages: ['HTML', 'CSS', 'BS'], //Here is the array of abbreviations for the languages. Simply add the abbreviation of the language to the array and the code will take care of the rest. DO NOT CHANGE FROM BEING AN ARRAY EVEN IF ONE ELEMENT!!!!
+                              },
+                              {
+                                   image: 'https://picsum.photos/600/300',
+                                   name: 'Project Name',
+                                   languages: ['HTML', 'CSS'],
+                              },
+                              {
+                                   image: 'https://picsum.photos/600/300',
+                                   name: 'Project Name',
+                                   languages: ['HTML', 'CSS', 'BS'],
+                              },
+                         ]
+                    },
+                    {
+                         header: "Year 2", 
+                         description: "This is the year 2 description of what is learned",
+                         projects: [
+                              {
+                                   image: 'https://picsum.photos/600/300',
+                                   name: 'Project Name',
+                                   languages: ['HTML', 'CSS', 'BS'],
+                              },
+                              {
+                                   image: 'https://picsum.photos/600/300',
+                                   name: 'Project Name',
+                                   languages: ['HTML', 'CSS'],
+                              },
+                              {
+                                   image: 'https://picsum.photos/600/300',
+                                   name: 'Project Name',
+                                   languages: ['HTML', 'CSS', 'BS'],
+                              },
+                         ]
+                    },
+                    {
+                         header: "Year 3", 
+                         description: "This is the year 3 description of what is learned",
+                         projects: [
+                              {
+                                   image: 'https://picsum.photos/600/300',
+                                   name: 'Project Name',
+                                   languages: ['HTML', 'CSS', 'BS'],
+                              },
+                              {
+                                   image: 'https://picsum.photos/600/300',
+                                   name: 'Project Name',
+                                   languages: ['HTML', 'CSS'],
+                              },
+                              {
+                                   image: 'https://picsum.photos/600/300',
+                                   name: 'Project Name',
+                                   languages: ['HTML', 'CSS', 'BS'],
+                              },
+                         ]
+                    }
+               ]
           }
      }
 })
