@@ -156,6 +156,14 @@ ul.text-center  {
   height: 20px;
 }
 
+.border {
+  border: black solid 2px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* FONTS */
 .kanit-thin {
      font-family: "Kanit", serif;
