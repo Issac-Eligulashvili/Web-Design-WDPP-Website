@@ -196,9 +196,9 @@
             >
               <div v-for="(card, index) in carousel">
                 <div
-                  class="webCarouselContent animate__animated position-absolute p-3"
+                  class="webCarouselContent animate__animated p-3"
                   :data-index="index"
-                  :class="{'carouselActive': index === 0}"
+                  :class="{'carouselActive': index === 0, 'd-none': index != 0}"
                 >
                   <h3 class="kanit-semibold m-0">{{card.header}}</h3>
                   <p class="kanit-regular">{{card.description}}</p>
@@ -287,6 +287,58 @@
             </div>
           </div>
           <!-- Class Activities Section -->
+          <h3 class="kanit-semibold mt-2">Fun Activities!</h3>
+          <div class="container">
+            <div class="row">
+              <div class="col-7 border-1 border-black">
+                <p>pic 1</p>
+              </div>
+              <div class="col-2">
+                <p>pic 2</p>
+              </div>
+              <div class="col-3">
+                <p>pic 3</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4"><p>pic 4</p></div>
+              <div class="col-4"><p>pic 5</p></div>
+              <div class="col-4"><p>pic 6</p></div>
+            </div>
+            <div class="row">
+              <div class="col-6"><p>pic 7</p></div>
+              <div class="col-6"><p>pic 8</p></div>
+            </div>
+            <div class="row">
+              <div class="col-5"><p>pic 9</p></div>
+              <div class="col-7"><p>pic 10</p></div>
+            </div>
+          </div>
+          <!-- Benefits Section -->
+          <h3 class="kanit-semibold mt-2">Why Take The Course?</h3>
+          <ul class="kanit-regular">
+            <li>Fun and Engaging Throughout all 3 years!</li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit,
+              qui!
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit,
+              qui!
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit,
+              qui!
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit,
+              qui!
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit,
+              qui!
+            </li>
+          </ul>
         </div>
       </main>
       <footer>
