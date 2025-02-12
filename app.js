@@ -10,7 +10,16 @@ const app = Vue.createApp({
                          /* 
                               1. Replace the image link with the link to the preferred screenshot of the project you would like to showcase. 
                               2. Provide the name of the project that you are showcasing preferrably from classroom. 
-                              3. Use ONLY the abbriviation for the languages you used i.e HTML, CSS, JS, BS, jQ, & Vue. 
+                              3. Use ONLY the abbriviation for the languages you used. 
+
+                              Language to Abbreviations are as follows:
+                              HTML- HTML
+                              CSS - CSS
+                              BootStrap - BS
+                              JavaScript - JS
+                              jQuery - jQ
+                              Vue - Vue
+
                               
                               see the first project slide for the example of where to change items. 
                          */
