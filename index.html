@@ -115,15 +115,24 @@
         <!-- Blank Div to push down content by height of the navbar -->
          <div style="height: 76px;"></div>
         <!-- Hero image -->
-        <img src="placeholder.jpg" class="w-100" />
+        <div class="hero-image-cont d-grid">
+          <img src="placeholder.jpg" class="hero-image" />
+          <div class="hero-text-overlay">
+            <div class="hero-text-border">
+              <div class="hero-text-container">
+                <h1 class="text-center my-2 kanit-extrabold title m-0 d-flex justify-content-center align-items-center">
+                  Web Design Pathway Program
+                </h1>
+                <h3 class="text-center kanit-semibold my-1 subtitle">
+                  A 3–year program focused on preparing students for a future career in
+                  Web Design (or related field)
+                </h3>
+              </div>
+            </div>      
+          </div>
+        </div>
         <!-- Begining of the main content -->
-        <h1 class="text-center my-4 kanit-extrabold title m-0">
-          Web Design Pathway Program
-        </h1>
-        <h3 class="text-center kanit-semibold my-4 subtitle">
-          A 3–year program focused on preparing students for a future career in
-          Web Design (or related field)
-        </h3>
+        
         <div class="container">
           <h4 class="kanit-semibold mt-3">Our Goals:</h4>
           <ul class="kanit-regular">
@@ -202,32 +211,35 @@
           </div>
           <h3 class="text-center kanit-semibold mt-5">Course Progression</h3>
           <!-- The navigation for Course Progression on web format/desktop format -->
-          <div class="row mt-3">
-            <div class="progressBar d-none d-md-block">
-              <div class="inner"></div>
-              <div class="overlay web"></div>
-            </div>
-            <div class="col-1 d-none d-md-block h-auto">
-              <div class="logo active" data-num-items="3" data-year="1">
-                <div class="logo-cont d-flex align-items-center">
-                  <img src="img/svg/HTML.svg" class="small-logo-svg" />
-                </div>
-                <div class="logo-cont my-2 d-flex align-items-center">
-                  <img src="img/svg/CSS.svg" class="small-logo-svg" />
-                </div>
-                <div class="logo-cont my-2 d-flex align-items-center">
-                  <img src="img/svg/BS.svg" class="small-logo-svg" />
-                </div>
+          <div class="row mt-3 align-items-center">
+            
+            <div class="col-1 d-none d-md-flex" style="height: fit-content;">
+              <div class="progressBar me-2 d-none d-md-block">
+                <div class="inner"></div>
+                <div class="overlay web"></div>
               </div>
-              <div class="logo my-2" data-num-items="4" data-year="2">
-                <img src="img/svg/JS.svg" class="small-logo-svg" />
-              </div>
-              <div class="logo" data-num-items="6" data-year="3">
-                <div class="logo-cont my-2">
-                  <img src="img/svg/jQ.svg" class="small-logo-svg" />
+              <div>
+                <div class="logo active" data-num-items="3" data-year="1">
+                  <div class="logo-cont d-flex align-items-center">
+                    <img src="img/svg/HTML.svg" class="small-logo-svg" />
+                  </div>
+                  <div class="logo-cont my-2 d-flex align-items-center">
+                    <img src="img/svg/CSS.svg" class="small-logo-svg" />
+                  </div>
+                  <div class="logo-cont my-2 d-flex align-items-center">
+                    <img src="img/svg/BS.svg" class="small-logo-svg" />
+                  </div>
                 </div>
-                <div class="logo-cont">
-                  <img src="img/svg/Vue.svg" class="small-logo-svg" />
+                <div class="logo my-2" data-num-items="4" data-year="2">
+                  <img src="img/svg/JS.svg" class="small-logo-svg" />
+                </div>
+                <div class="logo" data-num-items="6" data-year="3">
+                  <div class="logo-cont my-2">
+                    <img src="img/svg/jQ.svg" class="small-logo-svg" />
+                  </div>
+                  <div class="logo-cont">
+                    <img src="img/svg/Vue.svg" class="small-logo-svg" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -265,6 +277,7 @@
                 </div>
               </div>
             </div>
+            <!-- Carousel for each year -->
             <div
               class="col-12 col-md-10 m-0 ms-md-5 carousel-container position-relative"
             >
@@ -272,7 +285,7 @@
                 <div
                   class="webCarouselContent animate__animated p-3"
                   :data-index="index"
-                  :class="{'carouselActive': index === 0, 'd-none': index != 0}"
+                  :class="{'carouselActive': index === 0, 'd-none': index != 0, [`border-year-${index + 1}`]: true}"
                 >
                   <h3 class="kanit-semibold m-0">{{card.header}}</h3>
                   <p class="kanit-regular">{{card.description}}</p>
@@ -302,8 +315,9 @@
                     </div>
                     <div class="carousel-inner">
                       <div
-                        v-for="project in card.projects"
-                        class="carousel-item active"
+                        v-for="(project, index) in card.projects"
+                        class="carousel-item"
+                        :class="{'active' : index === 0}"
                       >
                         <img
                           :src="project.image"
@@ -415,9 +429,21 @@
           </ul>
         </div>
       </main>
-      <footer>
-        <!-- place footer here -->
-      </footer>
+      <!-- footer start -->
+      <footer id="sticky">
+        <div class="container-fluid">
+            <section class="row p-3">
+                <div class="col-4"><a href="https://www.instagram.com/marlborowdpp?igsh=eWJnbjA0M3Q0ajlr"
+                        target="_blank" class="text-white"><i class="fa-brands fa-instagram"></i>@marlborowdpp</a>
+                </div>
+                <div class="col-4"><a href="mailto:sleonard@frhsd.com" target="_blank" class="text-white"><i
+                            class="fa-regular fa-envelope" href=""></i> Ms. Leonard</a></div>
+                <div class="col-4"><a href="mailto:gkilgore@frhsd.com" target="_blank" class="text-white"><i
+                            class="fa-regular fa-envelope"></i> Mr. Kilgore</a></div>
+            </section>
+        </div>
+    </footer>
+    <!-- footer end -->
     </div>
     <!-- Bootstrap JavaScript Libraries -->
     <script

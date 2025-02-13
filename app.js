@@ -87,7 +87,7 @@ const app = Vue.createApp({
           }
      }
 })
-// jQuery Code LOLZZZZZ
+// jQuery Code
 
 $(document).ready(function () {
      $(".logo").on('click', (event) => {
@@ -100,14 +100,15 @@ $(document).ready(function () {
           }, 200)
           // implementing the navigation system of the Year Projects Carousel
           const previousElementIndex = $(".carouselActive").data("index"); //get the index of the current carousel slide so that you can remove the animation classes after 
-          
-          $(".carouselActive").addClass("animate__fadeOutDown")//fade out the currnnt year that is clicked 
-          $(".carouselActive").removeClass("carouselActive animate__fadeInDown"); //remove the classes and create the element back to the blank slate
-          $(".webCarouselContent").addClass("d-none");
-          $(`.webCarouselContent[data-index='${$(event.currentTarget).data("year") - 1}']`).removeClass("d-none").addClass("carouselActive animate__fadeInDown d-block"); //target the correct year to show based on the data attr from the button and the data index attr 
-          setTimeout(() => {
-          $(`.webCarouselContent[data-index='${previousElementIndex}']`).removeClass("animate__fadeOutDown"); //remove the fade down class to reset the animations and bring back to blank slate
-          }, 1000)
+          if (previousElementIndex != $(event.currentTarget).data("year") - 1) {
+               $(".carouselActive").addClass("animate__fadeOutDown")//fade out the currnnt year that is clicked 
+               $(".carouselActive").removeClass("carouselActive animate__fadeInDown"); //remove the classes and create the element back to the blank slate
+               $(".webCarouselContent").addClass("d-none");
+               $(`.webCarouselContent[data-index='${$(event.currentTarget).data("year") - 1}']`).removeClass("d-none").addClass("carouselActive animate__fadeInDown d-block"); //target the correct year to show based on the data attr from the button and the data index attr 
+               setTimeout(() => {
+               $(`.webCarouselContent[data-index='${previousElementIndex}']`).removeClass("animate__fadeOutDown"); //remove the fade down class to reset the animations and bring back to blank slate
+               }, 1000)
+          }
      })
 
      // Navigation bar for course progression on mobile
@@ -121,12 +122,14 @@ $(document).ready(function () {
           }, 200)
           // implementing the navigation system of the Year Projects Carousel
           const previousElementIndex = $(".carouselActive").data("index");//get the index of the current carousel slide so that you can remove the animation classes after 
-          
-          $(".carouselActive").addClass("animate__fadeOutDown"); //fade out the currnnt year that is clicked 
-          $(".carouselActive").removeClass("carouselActive animate__fadeInDown"); //remove the classes and create the element back to the blank slate
-          $(`.webCarouselContent[data-index='${$(event.currentTarget).data("year") - 1}']`).addClass("carouselActive animate__fadeInDown");//target the correct year to show based on the data attr from the button and the data index attr 
-          setTimeout(() => {
-          $(`.webCarouselContent[data-index='${previousElementIndex}']`).removeClass("animate__fadeOutDown");//remove the fade down class to reset the animations and bring back to blank slate
-          }, 1000)
+          if (previousElementIndex != $(event.currentTarget).data("year") - 1) {
+               $(".carouselActive").addClass("animate__fadeOutDown")//fade out the currnnt year that is clicked 
+               $(".carouselActive").removeClass("carouselActive animate__fadeInDown"); //remove the classes and create the element back to the blank slate
+               $(".webCarouselContent").addClass("d-none");
+               $(`.webCarouselContent[data-index='${$(event.currentTarget).data("year") - 1}']`).removeClass("d-none").addClass("carouselActive animate__fadeInDown d-block"); //target the correct year to show based on the data attr from the button and the data index attr 
+               setTimeout(() => {
+               $(`.webCarouselContent[data-index='${previousElementIndex}']`).removeClass("animate__fadeOutDown"); //remove the fade down class to reset the animations and bring back to blank slate
+               }, 1000)
+          }
      })
 });
