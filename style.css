@@ -212,6 +212,18 @@ ul.text-center  {
   border: rgba(0, 0, 0, 0.1) solid 2px;
   width: 100%;
   border-radius: 5px;
+  padding: 0px 10px 10px 10px;
+}
+
+.cardSymbolCont {
+  justify-content: center;
+  align-items: baseline;
+  display: flex;
+  padding: 10px;
+}
+
+.cardSymbolCont > img {
+  height: 95px;
 }
 
 /* Nav & Footer */
